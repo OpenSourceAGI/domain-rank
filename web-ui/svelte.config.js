@@ -13,6 +13,7 @@ const config = {
 	  }
 		}),
     alias: {
+      $data: "../data",
       $components: "src/lib/components",
       $configs: "src/lib/configs",
       $constants: "src/lib/constants",

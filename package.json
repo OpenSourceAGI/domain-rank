@@ -1,15 +1,23 @@
 {
+  "name": "domain-rank",
+  "description": "Domain Rank Top Million CommonCrawl domains, source names, duplicates, and favicons",
   "scripts": {
-    "start": "bun --hot run api.js"
+    "download": "bun src/import-domains-1m.js",
+    "info": "bun src/domain-info.js",
+    "favicons": "bun src/favicons.js",
+    "test": "bun test"
   },
   "type": "module",
   "dependencies": {
-    "node-base64-img": "^2.0.0",
-    "node-get-favicons": "^1.2.0",
-    "sbd": "^1.0.19",
-    "scrap-favicon": "^1.0.4",
-    "sharp": "^0.33.4",
+    "adm-zip": "^0.5.16",
+    "fuse.js": "^7.1.0",
+    "tldts": "^7.0.11",
+    "unzipper": "^0.12.3",
     "vitest": "^1.6.0",
-    "wink-distance": "^2.0.2"
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
   }
 }
